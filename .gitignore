@@ -1,0 +1,3 @@
+.DS_Store
+macOS-x64/application/**/*
+macOS-x64/target/**/*
