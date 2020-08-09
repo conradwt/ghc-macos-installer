@@ -39,26 +39,34 @@ spctl -a -t open --context context:primary-signature -v <path-to-executable-file
 
 Note: Please see `./scripts/codesign_verify_files`
 
-## notarize package
+## notarize app or package
 
 ```zsh
 xcrun altool \
   --notarize-app \
   --primary-bundle-id "org.haskell.ghc" \
-  --username "AC_USERNAME" \
-  --password "@keychain:AC_PASSWORD" \
+  --username "<AC_USERNAME>" \
+  --password "@keychain:<AC_PASSWORD>" \
   --file <path-to-pkg-file>
 ```
 
-Note: `AC_USERNAME` is Apple Developer e-mail address and `AC_PASSWORD` is your password added to the Apple Keychain app.
+Note: `<AC_USERNAME>` is Apple Developer e-mail address and `<AC_PASSWORD>` is your password added to the Apple Keychain app.
 
-## check status of notarization
+## check detailed status of notarization submission
 
 ```zsh
-xcrun altool --notarization-history 0 -u "AC_USERNAME" -p "@keychain:AC_PASSWORD"
+xcrun altool --notarization-info <RequestUUID> -u "<AC_USERNAME>"
 ```
 
-Note: `AC_USERNAME` is Apple Developer e-mail address and `AC_PASSWORD` is your password added to the Apple Keychain app.
+Note: `<AC_USERNAME>` is Apple Developer e-mail address and `<RequestUUID>` is generated when one submits an **app** or **package** to the Apple Notarization Service. Please see `notarize app or package` section.
+
+## chaeck status of most recent notarization submissions (optional)
+
+```zsh
+xcrun altool --notarization-history 0 -u "<AC_USERNAME>" -p "@keychain:<AC_PASSWORD>"
+```
+
+Note: `<AC_USERNAME>` is Apple Developer e-mail address and `<AC_PASSWORD>` is your password added to the Apple Keychain app.
 
 ## after notarization completes sucessfully, staple the package
 
