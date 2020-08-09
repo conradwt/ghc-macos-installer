@@ -60,7 +60,7 @@ xcrun altool --notarization-info <RequestUUID> -u "<AC_USERNAME>"
 
 Note: `<AC_USERNAME>` is Apple Developer e-mail address and `<RequestUUID>` is generated when one submits an **app** or **package** to the Apple Notarization Service. Please see `notarize app or package` section.
 
-## chaeck status of most recent notarization submissions (optional)
+## check status of most recent notarization submissions (optional)
 
 ```zsh
 xcrun altool --notarization-history 0 -u "<AC_USERNAME>" -p "@keychain:<AC_PASSWORD>"
