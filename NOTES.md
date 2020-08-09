@@ -68,7 +68,7 @@ xcrun altool --notarization-history 0 -u "<AC_USERNAME>" -p "@keychain:<AC_PASSW
 
 Note: `<AC_USERNAME>` is Apple Developer e-mail address and `<AC_PASSWORD>` is your password added to the Apple Keychain app.
 
-## after notarization completes sucessfully, staple the package
+## after notarization completes successfully, staple the package
 
 ```zsh
 xcrun stapler staple <path-to-pkg-file>
