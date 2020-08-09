@@ -31,6 +31,12 @@ GHC macOS Installer was originally created and influenced by Kosala Sananthana's
    ./build-macos-x64.sh <product> <version>
    ```
 
+   e.g.
+
+   ```zsh
+   ./build-macos-x64.sh ghc 8.10.2
+   ```
+
 ## References
 
 - https://developer.apple.com/developer-id
