@@ -12,13 +12,16 @@ GHC macOS Installer was originally created and influenced by Kosala Sananthana's
 
 ## Installation, Setup, and Usage
 
-1. Download and Uncompress a recent GHC version
+1. Download and decompress a recent GHC version
+
+   e.g.
 
    ```zsh
+   wget https://downloads.haskell.org/~ghc/8.10.2/ghc-8.10.2-x86_64-apple-darwin.tar.xz
    gunzip -dc ghc-X.Y.Z-x86_64-apple-darwin.tar.xz | tar xf -
    ```
 
-2. copy files to macOS Installer `application` directory
+2. Copy files to macOS Installer `application` directory
 
    ```zsh
    cp -r /path/to/ghc-X.Y.Z/* /path/to/ghc-macos-installer/macOS-x64/application
@@ -27,6 +30,7 @@ GHC macOS Installer was originally created and influenced by Kosala Sananthana's
 3. Download and Run Installer
 
    ```zsh
+   git clone https://github.com/conradwt/ghc-macos-installer
    cd /path/to/ghc-macos-installer
    ./build-macos-x64.sh <product> <version>
    ```
